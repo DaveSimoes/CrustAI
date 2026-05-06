@@ -1,0 +1,60 @@
+# CrustAI Configuration
+# Copy this file to config.yml and fill in your values.
+# config.yml is git-ignored — your secrets stay local.
+
+# ─── AI Model ────────────────────────────────────────────────
+model: llama3.2          # Any model available in Ollama
+ollama_url: http://localhost:11434
+temperature: 0.7
+max_tokens: 1024
+
+# ─── Language & Personality ──────────────────────────────────
+language: pt-BR          # pt-BR | pt-PT | en | es | fr | de
+personality_file: config/personality.yml
+
+# ─── Memory ──────────────────────────────────────────────────
+memory:
+  max_turns: 20          # Short-term context window
+  db_path: ./data/memory.db
+  chromadb_url: http://localhost:8000
+
+# ─── Platforms ───────────────────────────────────────────────
+whatsapp:
+  enabled: false
+  session_path: ./data/whatsapp-session
+
+telegram:
+  enabled: false
+  token: ""
+  allowed_user_ids: []   # Leave empty to allow anyone (not recommended)
+
+discord:
+  enabled: false
+  token: ""
+  guild_id: ""
+  channel_id: ""
+
+slack:
+  enabled: false
+  bot_token: ""
+  app_token: ""
+
+# ─── Voice ───────────────────────────────────────────────────
+voice:
+  enabled: false
+  port: 8765
+  wake_word: "hey crustai"
+  stt_model: small       # tiny | base | small | medium
+  stt_language: pt       # ISO 639-1 language code
+  tts_voice: pt_BR-faber-medium   # See docs/VOICE.md for options
+
+# ─── Remote Access ───────────────────────────────────────────
+remote:
+  enabled: false
+  provider: tailscale    # tailscale | cloudflare
+  hostname: crustai      # Your Tailscale machine name
+
+# ─── Server ──────────────────────────────────────────────────
+server:
+  port: 3000
+  log_level: info        # debug | info | warn | error

@@ -1,0 +1,9 @@
+node_modules/
+config/config.yml
+data/
+*.db
+*.wav
+*.log
+.env
+dist/
+.DS_Store

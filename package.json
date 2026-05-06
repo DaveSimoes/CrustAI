@@ -1,0 +1,50 @@
+{
+  "name": "crustai",
+  "version": "0.1.0",
+  "description": "Private, local-first AI assistant with multi-platform chat and offline voice.",
+  "main": "src/core/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/core/index.js",
+    "dev": "node --watch src/core/index.js",
+    "setup": "node scripts/setup.js",
+    "connect": "node scripts/connect.js",
+    "test": "node scripts/test.js"
+  },
+  "keywords": [
+    "ai",
+    "assistant",
+    "local",
+    "private",
+    "ollama",
+    "llm",
+    "whatsapp",
+    "telegram",
+    "discord",
+    "slack",
+    "voice",
+    "offline"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@fastify/websocket": "^10.0.1",
+    "@hapi/boom": "^10.0.1",
+    "@slack/bolt": "^3.18.0",
+    "@whiskeysockets/baileys": "^6.7.0",
+    "chalk": "^5.6.2",
+    "chromadb": "^1.9.2",
+    "discord.js": "^14.15.0",
+    "fastify": "^4.27.0",
+    "inquirer": "^10.2.2",
+    "node-fetch": "^3.3.2",
+    "node-telegram-bot-api": "^0.66.0",
+    "ora": "^8.2.0",
+    "sql.js": "^1.12.0",
+    "yaml": "^2.8.3",
+    "@fastify/static": "^7.0.4"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

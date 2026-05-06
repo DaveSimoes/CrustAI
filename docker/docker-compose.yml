@@ -1,0 +1,54 @@
+version: '3.9'
+
+# CrustAI — Full stack in one command
+# Usage: docker compose up -d
+
+services:
+
+  ollama:
+    image: ollama/ollama:latest
+    container_name: crustai-ollama
+    restart: unless-stopped
+    volumes:
+      - ollama_data:/root/.ollama
+    ports:
+      - "11434:11434"
+    # Uncomment below if you have an NVIDIA GPU:
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: all
+    #           capabilities: [gpu]
+
+  chromadb:
+    image: chromadb/chroma:latest
+    container_name: crustai-chromadb
+    restart: unless-stopped
+    volumes:
+      - chroma_data:/chroma/chroma
+    ports:
+      - "8000:8000"
+
+  crustai:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    container_name: crustai-app
+    restart: unless-stopped
+    depends_on:
+      - ollama
+      - chromadb
+    volumes:
+      - ./config:/app/config
+      - ./data:/app/data
+    ports:
+      - "3000:3000"   # REST API
+      - "8765:8765"   # Voice WebSocket
+    environment:
+      - NODE_ENV=production
+
+volumes:
+  ollama_data:
+  chroma_data:
