@@ -1,23 +1,14 @@
 <div align="center">
 
-```
- ██████╗██████╗ ██╗   ██╗███████╗████████╗ █████╗ ██╗
-██╔════╝██╔══██╗██║   ██║██╔════╝╚══██╔══╝██╔══██╗██║
-██║     ██████╔╝██║   ██║███████╗   ██║   ███████║██║
-██║     ██╔══██╗██║   ██║╚════██║   ██║   ██╔══██║██║
-╚██████╗██║  ██║╚██████╔╝███████║   ██║   ██║  ██║██║
- ╚═════╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝   ╚═╝   ╚═╝  ╚═╝╚═╝
-```
+ # 🦀 CrustAI — Private Local AI Assistant for Messaging Platforms
 
-# 🦀 CrustAI — Your Private, Local AI Assistant
-
-**Always on. Always yours. Never in the cloud.**
+**Run a multi-platform AI assistant on your own machine with full privacy (Telegram, Discord, WhatsApp, Slack).**
 
 [![Node.js](https://img.shields.io/badge/Node.js-≥20.0-brightgreen?style=for-the-badge&logo=node.js)](https://nodejs.org)
 [![Ollama](https://img.shields.io/badge/Ollama-Local%20LLM-blue?style=for-the-badge)](https://ollama.ai)
-[![Telegram](https://img.shields.io/badge/Telegram-Bot-26A5E4?style=for-the-badge&logo=telegram)](https://telegram.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
-[![Portfolio](https://img.shields.io/badge/Portfolio-Dave%20Simoes-red?style=for-the-badge)](https://github.com/DaveSimoes)
+[![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-ff69b4?style=for-the-badge)](#-contributing)
+
 
 ---
 
@@ -29,14 +20,22 @@
 
 ## 🌍 Language / Idioma
 
-- 🇺🇸 [English](#-what-is-crustai) — below
-- 🇧🇷 [Português](#-o-que-é-o-crustai) — mais abaixo
+- 🇺🇸 [English](#-what-is-crustai) 
+- 🇧🇷 [Português](#-o-que-é-o-crustai) 
 
 ---
 
+## ⚡ 30-second preview
+
+
+
+![30-second Preview](demo/chat.gif)
+<img width="600" height="307" alt="chat gif" src="https://github.com/user-attachments/assets/acdd3cfb-5b0a-4f03-83bf-09206b452bc4" />
+
+
 ## 🇺🇸 What is CrustAI?
 
-**CrustAI** is a fully private, self-hosted AI assistant that runs entirely on your own machine — no data ever leaves your computer. It connects to popular messaging platforms like **Telegram, WhatsApp, Discord, and Slack**, giving you the power of a conversational AI without sacrificing your privacy.
+CrustAI is a **self-hosted AI assistant** that runs 100% locally using Ollama. It integrates with Telegram, Discord, WhatsApp and Slack so you can chat with your assistant in tools you already use—without sending your conversation data to cloud LLM providers.
 
 Built with **Node.js** and powered by **Ollama** (local LLM runtime), CrustAI is designed for developers, privacy enthusiasts, and anyone who wants an AI assistant that truly belongs to them.
 
@@ -46,14 +45,13 @@ Built with **Node.js** and powered by **Ollama** (local LLM runtime), CrustAI is
 
 | Feature | Description |
 |---|---|
-| 🔒 **100% Private** | All data stays on your machine. No cloud, no telemetry |
-| 🧠 **Local LLM** | Powered by Ollama — supports llama3.2, tinyllama, phi3 and more |
-| 📱 **Multi-Platform** | Telegram, WhatsApp, Discord, Slack — all in one bot |
-| 🧬 **Long-term Memory** | Remembers facts about you across conversations |
-| 🗣️ **Voice Support** | Offline speech-to-text and text-to-speech (pt-BR) |
-| ⚡ **REST API** | Built-in API for custom integrations |
-| 🎭 **Custom Personality** | Configure your assistant's name, tone and behavior |
-| 🌐 **Multilingual** | Native support for Portuguese and English |
+| 🔒 **100% Local & Private** | Conversations stay on your machine |
+| 🧠 **LLM via Ollama** | Use tinyllama, llama3.2, phi3 and more |
+| 📱 **Multi-platform Adapters** | Telegram, WhatsApp, Discord, Slack |
+| 🧬 **Long-term Memory** | Store and retrieve user facts |
+| ⚡ **REST API** | Integrate CrustAI into external workflows |
+| 🎭 **Personality Config** | Customize tone, style and identity |
+| 🌐 **Bilingual UX** | English + Portuguese support |
 
 ---
 
@@ -99,28 +97,22 @@ Built with **Node.js** and powered by **Ollama** (local LLM runtime), CrustAI is
 ## 🏗️ Architecture
 
 ```
-┌─────────────────────────────────────────────────────┐
-│                     CrustAI Core                     │
-│                                                      │
-│  ┌──────────┐  ┌──────────┐  ┌──────────────────┐  │
-│  │ Telegram │  │ Discord  │  │     WhatsApp     │  │
-│  │  Adapter │  │  Adapter │  │      Adapter     │  │
-│  └────┬─────┘  └────┬─────┘  └────────┬─────────┘  │
-│       │              │                  │            │
-│       └──────────────┼──────────────────┘            │
-│                      ▼                               │
-│            ┌─────────────────┐                      │
-│            │  Message Handler │                      │
-│            └────────┬────────┘                      │
-│                     │                               │
-│         ┌───────────┼───────────┐                   │
-│         ▼           ▼           ▼                   │
-│    ┌─────────┐ ┌────────┐ ┌──────────┐             │
-│    │  Ollama │ │ Memory │ │ REST API │             │
-│    │  (LLM)  │ │  Store │ │  Server  │             │
-│    └─────────┘ └────────┘ └──────────┘             │
-└─────────────────────────────────────────────────────┘
+```text
+Adapters (Telegram / Discord / WhatsApp / Slack)
+                │
+                ▼
+         Message Orchestrator
+        ┌────────┴────────┐
+        ▼                 ▼
+   Ollama Client      Memory Store
+        │                 │
+        └────────┬────────┘
+                 ▼
+             REST API
 ```
+
+
+**Design note:** adapter boundaries make it easy to add new channels without changing core conversation logic.
 
 ---
 
