@@ -96,7 +96,7 @@ Built with **Node.js** and powered by **Ollama** (local LLM runtime), CrustAI is
 
 ## 🏗️ Architecture
 
-```
+
 ```text
 Adapters (Telegram / Discord / WhatsApp / Slack)
                 │
