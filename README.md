@@ -25,12 +25,13 @@
 
 ---
 
-## ⚡ 30-second preview
+## ⚡ Video-chat preview
 
 
 
 ![30-second Preview](demo/chat.gif)
-<img width="600" height="307" alt="chat gif" src="https://github.com/user-attachments/assets/acdd3cfb-5b0a-4f03-83bf-09206b452bc4" />
+<img width="600" height="307" alt="new_video_real_chatonline-video-cutter com-ezgif com-optimize" src="https://github.com/user-attachments/assets/1632b62d-e2fb-4d32-8caf-946161dbffa5" />
+
 
 
 ## 🇺🇸 What is CrustAI?
