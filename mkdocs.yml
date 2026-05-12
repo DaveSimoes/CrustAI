@@ -1,0 +1,20 @@
+site_name: CrustAI Documentation
+site_description: Build an AI Assistant in JavaScript with CrustAI
+site_url: https://crustaidocs.netlify.app
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - search.highlight
+    - content.code.copy
+
+nav:
+  - Home: index.md
+  - Quickstart: QUICKSTART.md
+  - Integrations: INTEGRATIONS.md
+  - Remote Access: REMOTE_ACCESS.md
+  - Voice Module: VOICE.md
