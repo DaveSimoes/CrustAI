@@ -1,42 +1,67 @@
 <div align="center">
 
- # 🦀 CrustAI — Private Local AI Assistant for Messaging Platforms
+<!-- HERO BANNER -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=200&section=header&text=🦀%20CrustAI&fontSize=80&fontColor=fff&animation=fadeIn&fontAlignY=35&desc=Private%20%7C%20Local-First%20%7C%20Multi-Platform%20AI%20Assistant&descAlignY=60&descSize=18" width="100%" />
 
-**Run a multi-platform AI assistant on your own machine with full privacy (Telegram, Discord, WhatsApp, Slack).**
+<!-- BADGES ROW 1 — Social proof (STAR CTA primeiro!) -->
+[![GitHub stars](https://img.shields.io/github/stars/DaveSimoes/CrustAI?style=social)](https://github.com/DaveSimoes/CrustAI/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/DaveSimoes/CrustAI?style=social)](https://github.com/DaveSimoes/CrustAI/network/members)
+[![GitHub watchers](https://img.shields.io/github/watchers/DaveSimoes/CrustAI?style=social)](https://github.com/DaveSimoes/CrustAI/watchers)
 
+<!-- BADGES ROW 2 — Tech -->
 [![Node.js](https://img.shields.io/badge/Node.js-≥20.0-brightgreen?style=for-the-badge&logo=node.js)](https://nodejs.org)
 [![Ollama](https://img.shields.io/badge/Ollama-Local%20LLM-blue?style=for-the-badge)](https://ollama.ai)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](https://github.com/DaveSimoes/CrustAI/blob/main/LICENSE)
 [![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-ff69b4?style=for-the-badge)](#-contributing)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=for-the-badge)](https://github.com/DaveSimoes/CrustAI/pulls)
 
-
----
-
-> 🔒 **100% Private** · 🖥️ **Runs Locally** · 🧠 **Powered by Open-Source LLMs** · 🌐 **Multi-Platform**
+<!-- TAGLINE -->
+<h3>Run a multi-platform AI assistant on your own machine — with full privacy.</h3>
+<p><b>Telegram · Discord · WhatsApp · Slack</b> — powered by open-source LLMs, 100% offline.</p>
 
 </div>
 
 ---
 
-## 🌍 Language / Idioma
+## ⭐ Por que dar uma estrela? / Why star this project?
 
-- 🇺🇸 [English](#-what-is-crustai) 
-- 🇧🇷 [Português](#-o-que-é-o-crustai) 
+> **Se você acha privacidade importante, este projeto é para você.**
+> **If you care about privacy, this project is for you.**
+
+- 🔒 **Zero cloud dependency** — your conversations never leave your machine
+- 🧠 **Real local AI** — not a wrapper, a full local LLM runtime via Ollama
+- 📱 **Works where you already are** — Telegram, WhatsApp, Discord, Slack
+- 🌐 **Bilingual** — English + Portuguese, more languages welcome
+- 🛠️ **Open & extensible** — MIT license, clean architecture, easy to hack
+- 🚀 **Active roadmap** — Web UI, Docker one-click, Plugin system coming
+
+**⭐ Star the repo to support open-source, private AI — it takes 2 seconds and means the world to the maintainer.**
 
 ---
 
-## ⚡ Video-chat preview
+## 🌍 Language / Idioma
 
+- 🇺🇸 [English](#-what-is-crustai)
+- 🇧🇷 [Português](#-o-que-é-o-crustai)
 
+---
 
-![30-second Preview](demo/chat.gif)
-<img width="600" height="307" alt="new_video_real_chatonline-video-cutter com-ezgif com-optimize" src="https://github.com/user-attachments/assets/1632b62d-e2fb-4d32-8caf-946161dbffa5" />
+## ⚡ Live Preview
 
+<div align="center">
 
+| Boot | Telegram | AI Chat |
+|:---:|:---:|:---:|
+| ![Terminal Demo](https://github.com/DaveSimoes/CrustAI/raw/main/demo/terminal.gif) | ![Ping Demo](https://github.com/DaveSimoes/CrustAI/raw/main/demo/ping.gif) | ![Chat Demo](https://github.com/DaveSimoes/CrustAI/raw/main/demo/chat.gif) |
+| *CrustAI booting up* | *Bot live on Telegram* | *AI responding locally* |
+
+</div>
+
+---
 
 ## 🇺🇸 What is CrustAI?
 
-CrustAI is a **self-hosted AI assistant** that runs 100% locally using Ollama. It integrates with Telegram, Discord, WhatsApp and Slack so you can chat with your assistant in tools you already use—without sending your conversation data to cloud LLM providers.
+CrustAI is a **self-hosted AI assistant** that runs 100% locally using Ollama. It integrates with **Telegram, Discord, WhatsApp and Slack** so you can chat with your AI in tools you already use — without sending your data to any cloud LLM provider.
 
 Built with **Node.js** and powered by **Ollama** (local LLM runtime), CrustAI is designed for developers, privacy enthusiasts, and anyone who wants an AI assistant that truly belongs to them.
 
@@ -46,74 +71,14 @@ Built with **Node.js** and powered by **Ollama** (local LLM runtime), CrustAI is
 
 | Feature | Description |
 |---|---|
-| 🔒 **100% Local & Private** | Conversations stay on your machine |
-| 🧠 **LLM via Ollama** | Use tinyllama, llama3.2, phi3 and more |
+| 🔒 **100% Local & Private** | Conversations stay on your machine — always |
+| 🧠 **LLM via Ollama** | Use tinyllama, llama3.2, phi3, mistral and more |
 | 📱 **Multi-platform Adapters** | Telegram, WhatsApp, Discord, Slack |
-| 🧬 **Long-term Memory** | Store and retrieve user facts |
+| 🧬 **Long-term Memory** | Store and retrieve user facts across sessions |
 | ⚡ **REST API** | Integrate CrustAI into external workflows |
 | 🎭 **Personality Config** | Customize tone, style and identity |
 | 🌐 **Bilingual UX** | English + Portuguese support |
-
----
-
-## 🎬 Demo
-
-### 🖥️ Step 1 — Starting CrustAI
-*Watch the system boot up and connect to the local AI model*
-
-![Terminal Demo](demo/terminal.gif)
-<img width="600" height="314" alt="terminal gif" src="https://github.com/user-attachments/assets/2b27a3b1-005b-4eff-84fd-57160b657846" />
-
-
----
-
-### 📱 Step 2 — Bot Connected on Telegram
-*The bot responds instantly — running 100% offline*
-
-![Ping Demo](demo/ping.gif)
-<img width="600" height="304" alt="ping gif" src="https://github.com/user-attachments/assets/9164d292-7e99-498b-8f42-5a57501e61a7" />
-
----
-
-### 🧠 Step 3 — AI Responding in Real Time
-*Ask anything — the answer comes from your own machine*
-
-![Chat Demo](demo/chat.gif)
-<img width="600" height="307" alt="chat gif" src="https://github.com/user-attachments/assets/acdd3cfb-5b0a-4f03-83bf-09206b452bc4" />
-
----
-
-### Commands available:
-```
-/ping      → Check if the bot is alive
-/help      → Show all commands
-/model     → Show which AI model is running
-/remember  → Store a fact in long-term memory
-/forget    → Erase all stored facts
-/clear     → Clear conversation history
-```
-
----
-
-## 🏗️ Architecture
-
-
-```text
-Adapters (Telegram / Discord / WhatsApp / Slack)
-                │
-                ▼
-         Message Orchestrator
-        ┌────────┴────────┐
-        ▼                 ▼
-   Ollama Client      Memory Store
-        │                 │
-        └────────┬────────┘
-                 ▼
-             REST API
-```
-
-
-**Design note:** adapter boundaries make it easy to add new channels without changing core conversation logic.
+| 🗣️ **Voice Offline** | Speak and listen without internet (pt-BR) |
 
 ---
 
@@ -176,6 +141,39 @@ voice:
   enabled: false
   port: 8765
 ```
+
+---
+
+## 💬 Available Commands
+
+```
+/ping      → Check if the bot is alive
+/help      → Show all commands
+/model     → Show which AI model is running
+/remember  → Store a fact in long-term memory
+/forget    → Erase all stored facts
+/clear     → Clear conversation history
+```
+
+---
+
+## 🏗️ Architecture
+
+```
+Adapters (Telegram / Discord / WhatsApp / Slack)
+                │
+                ▼
+         Message Orchestrator
+        ┌────────┴────────┐
+        ▼                 ▼
+   Ollama Client      Memory Store
+        │                 │
+        └────────┬────────┘
+                 ▼
+             REST API
+```
+
+> **Design note:** adapter boundaries make it easy to add new channels without changing core conversation logic.
 
 ---
 
@@ -244,27 +242,56 @@ CrustAI was built with privacy as its core principle:
 
 ## 🗺️ Roadmap
 
-- [ ] Web UI dashboard
-- [ ] Image understanding (multimodal LLMs)
-- [ ] Plugin system for custom tools
-- [ ] Docker one-click deployment
-- [ ] Mobile app companion
+- [ ] 🖥️ Web UI dashboard
+- [ ] 🖼️ Image understanding (multimodal LLMs)
+- [ ] 🧩 Plugin system for custom tools
+- [ ] 🐳 Docker one-click deployment
+- [ ] 📱 Mobile app companion
+
+> 💡 Want to help build any of these? Check the [open issues](https://github.com/DaveSimoes/CrustAI/issues) — contributions are very welcome!
+
+---
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!
+
+1. Fork the project
+2. Create your feature branch: `git checkout -b feat/my-feature`
+3. Commit your changes: `git commit -m 'feat: add my feature'`
+4. Push to the branch: `git push origin feat/my-feature`
+5. Open a Pull Request
+
+See [`CONTRIBUTING.md`](./CONTRIBUTING.md) for detailed guidelines.
 
 ---
 
 ## 👨‍💻 Author
 
-**Dave Simoes**
+**Dave Simoes** — Developer passionate about AI, privacy and open source.
+
 - 🐙 GitHub: [@DaveSimoes](https://github.com/DaveSimoes)
 - 💼 LinkedIn: [Dave Simoes](https://linkedin.com/in/davesimoes)
 
 ---
 
-## 📄 License
+<div align="center">
 
-This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
+## ⭐ Support the Project
+
+**If CrustAI helped you, please give it a star — it helps a lot!**
+**Se o CrustAI te ajudou, deixe uma estrela — faz toda a diferença!**
+
+[![GitHub stars](https://img.shields.io/github/stars/DaveSimoes/CrustAI?style=for-the-badge&logo=github&color=yellow)](https://github.com/DaveSimoes/CrustAI/stargazers)
+
+*Made with 🦀 and ❤️ by Dave Simoes*
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=100&section=footer" width="100%" />
+
+</div>
 
 ---
+
 ---
 
 ## 🇧🇷 O que é o CrustAI?
@@ -286,32 +313,6 @@ Construído com **Node.js** e alimentado pelo **Ollama** (motor de LLM local), o
 | 🗣️ **Voz Offline** | Fala e escuta sem internet (pt-BR) |
 | ⚡ **REST API** | API integrada para integrações customizadas |
 | 🎭 **Personalidade** | Configure o nome, tom e comportamento do assistente |
-
----
-
-## 🎬 Demonstração
-
-### 🖥️ Passo 1 — Iniciando o CrustAI
-*O sistema inicializando e conectando ao modelo de IA local*
-
-![Terminal Demo](demo/terminal.gif)
-<img width="600" height="314" alt="terminal gif" src="https://github.com/user-attachments/assets/781e1d43-6b45-487e-be8e-c90384cade44" />
-
----
-
-### 📱 Passo 2 — Bot Conectado no Telegram
-*O bot respondendo instantaneamente — 100% offline*
-
-![Ping Demo](demo/ping.gif)
-<img width="600" height="304" alt="ping gif" src="https://github.com/user-attachments/assets/e9853d5b-5170-426a-bff0-5d05ec83a7bf" />
-
----
-
-### 🧠 Passo 3 — IA Respondendo em Tempo Real
-*Pergunte qualquer coisa — a resposta vem da sua própria máquina*
-
-![Chat Demo](demo/chat.gif)
-<img width="600" height="307" alt="chat gif" src="https://github.com/user-attachments/assets/037adb09-5999-4a1b-bd21-12e4c365d83a" />
 
 ---
 
@@ -339,19 +340,8 @@ npm start
 
 ---
 
-## 👨‍💻 Autor
+## 📄 License / Licença
 
-**Dave Simoes** — Desenvolvedor apaixonado por IA, privacidade e código aberto.
+This project is licensed under the **MIT License** — see the [LICENSE](./LICENSE) file for details.
 
-- 🐙 GitHub: [@DaveSimoes](https://github.com/DaveSimoes)
-- 💼 LinkedIn: [Dave Simoes](https://linkedin.com/in/davesimoes)
-
----
-
-<div align="center">
-
-**⭐ Se este projeto te ajudou, deixe uma estrela! / If this project helped you, leave a star! ⭐**
-
-*Made with 🦀 and ❤️ by Dave Simoes*
-
-</div>
+Este projeto está licenciado sob a **Licença MIT** — veja o arquivo [LICENSE](./LICENSE) para detalhes.
