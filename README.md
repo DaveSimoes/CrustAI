@@ -31,7 +31,7 @@
 - 🔒 **Zero cloud dependency** — your conversations never leave your machine
 - 🧠 **Real local AI** — not a wrapper, a full local LLM runtime via Ollama
 - 📱 **Works where you already are** — Telegram, WhatsApp, Discord, Slack
-- 🌐 **Bilingual** — English + Portuguese, more languages welcome
+- 🌐 **Multilingual** — English, Portuguese & Spanish (more languages welcome)
 - 🛠️ **Open & extensible** — MIT license, clean architecture, easy to hack
 - 🚀 **Active roadmap** — Web UI, Docker one-click, Plugin system coming
 
@@ -39,10 +39,11 @@
 
 ---
 
-## 🌍 Language / Idioma
+## 🌍 Language / Idioma / Idioma
 
 - 🇺🇸 [English](#-what-is-crustai)
 - 🇧🇷 [Português](#-o-que-é-o-crustai)
+- 🇪🇸 [Español](#-qué-es-crustai)
 
 ---
 
@@ -77,7 +78,7 @@ Built with **Node.js** and powered by **Ollama** (local LLM runtime), CrustAI is
 | 🧬 **Long-term Memory** | Store and retrieve user facts across sessions |
 | ⚡ **REST API** | Integrate CrustAI into external workflows |
 | 🎭 **Personality Config** | Customize tone, style and identity |
-| 🌐 **Bilingual UX** | English + Portuguese support |
+| 🌐 **Multilingual UX** | English, Portuguese & Spanish support |
 | 🗣️ **Voice Offline** | Speak and listen without internet (pt-BR) |
 
 ---
@@ -123,7 +124,7 @@ Edit `config/config.yml`:
 ```yaml
 model: tinyllama          # or llama3.2, phi3, mistral...
 ollama_url: http://localhost:11434
-language: pt-BR
+language: pt-BR   # options: en-US | pt-BR | es-ES
 
 telegram:
   enabled: true
@@ -291,6 +292,53 @@ See [`CONTRIBUTING.md`](./CONTRIBUTING.md) for detailed guidelines.
 </div>
 
 ---
+
+---
+
+## 🇪🇸 ¿Qué es CrustAI?
+
+**CrustAI** es un asistente de IA completamente privado y auto-hospedado que funciona 100% en tu propia máquina — ningún dato sale de tu computadora. Se conecta con plataformas de mensajería populares como **Telegram, WhatsApp, Discord y Slack**, ofreciendo el poder de una IA conversacional sin comprometer tu privacidad.
+
+Construido con **Node.js** e impulsado por **Ollama** (motor de LLM local), CrustAI está diseñado para desarrolladores, entusiastas de la privacidad y cualquier persona que quiera un asistente de IA que verdaderamente les pertenezca.
+
+---
+
+## ✨ Funcionalidades Principales
+
+| Funcionalidad | Descripción |
+|---|---|
+| 🔒 **100% Privado** | Todos los datos permanecen en tu máquina. Sin nube |
+| 🧠 **LLM Local** | Powered by Ollama — soporta llama3.2, tinyllama y más |
+| 📱 **Multi-Plataforma** | Telegram, WhatsApp, Discord, Slack — un solo bot |
+| 🧬 **Memoria Larga** | Recuerda datos sobre ti entre conversaciones |
+| 🗣️ **Voz Sin Internet** | Habla y escucha sin conexión (es-ES) |
+| ⚡ **REST API** | API integrada para integraciones personalizadas |
+| 🎭 **Personalidad** | Configura el nombre, tono y comportamiento del asistente |
+
+---
+
+## 🚀 Inicio Rápido
+
+```bash
+# 1. Clona el repositorio
+git clone https://github.com/DaveSimoes/CrustAI.git
+cd CrustAI
+
+# 2. Instala las dependencias
+npm install
+
+# 3. Inicia Ollama y descarga un modelo
+ollama serve
+ollama pull tinyllama
+
+# 4. Configura el proyecto
+cp config/config.example.yml config/config.yml
+# Edita config/config.yml con tu token de Telegram
+# Cambia language: es-ES en config/personality.yml
+
+# 5. Inicia CrustAI
+npm start
+```
 
 ---
 
