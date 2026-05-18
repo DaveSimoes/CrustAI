@@ -4,6 +4,7 @@
  */
 
 import chalk from 'chalk';
+import { pathToFileURL } from 'url';
 import { loadConfig, loadPersonality } from '../utils/config.js';
 import { logger, setLogLevel } from '../utils/logger.js';
 import { LLMClient } from './llm.js';
@@ -19,6 +20,37 @@ const ASCII = chalk.red(`
  ╚██████╗██║  ██║╚██████╔╝███████║   ██║   ██║  ██║██║
   ╚═════╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝   ╚═╝   ╚═╝  ╚═╝╚═╝
 `);
+
+export function createMessageHandler({ memory, llm, config, personality, now = () => new Date() }) {
+  return async function handleMessage({ userId, text, channel }) {
+    // 1. Check for slash commands first
+    const parsed = parseCommand(text);
+    if (parsed) {
+      return handleCommand(parsed, { memory, config, userId });
+    }
+
+    // 2. Build context and call LLM
+    const [history, memCtx] = await Promise.all([
+      memory.getHistory(userId),
+      memory.getContext(userId),
+    ]);
+
+    const systemPrompt = buildSystemPrompt(personality, {
+      memory_context: memCtx,
+      channel,
+      date: now().toLocaleDateString(config.language || 'pt-BR'),
+      language: config.language,
+    });
+
+    const messages = [...history, { role: 'user', content: text }];
+    const reply = await llm.chat(messages, systemPrompt);
+
+    // 3. Persist the turn
+    await memory.addTurn(userId, text, reply);
+
+    return reply;
+  };
+}
 
 async function main() {
   console.log(ASCII);
@@ -42,34 +74,7 @@ async function main() {
   await memory.init();
 
   // ── Central message handler (used by ALL adapters) ─────────────────────────
-  async function handleMessage({ userId, text, channel }) {
-    // 1. Check for slash commands first
-    const parsed = parseCommand(text);
-    if (parsed) {
-      return handleCommand(parsed, { memory, config, userId });
-    }
-
-    // 2. Build context and call LLM
-    const [history, memCtx] = await Promise.all([
-      memory.getHistory(userId),
-      memory.getContext(userId),
-    ]);
-
-    const systemPrompt = buildSystemPrompt(personality, {
-      memory_context: memCtx,
-      channel,
-      date: new Date().toLocaleDateString(config.language || 'pt-BR'),
-      language: config.language,
-    });
-
-    const messages = [...history, { role: 'user', content: text }];
-    const reply = await llm.chat(messages, systemPrompt);
-
-    // 3. Persist the turn
-    await memory.addTurn(userId, text, reply);
-
-    return reply;
-  }
+  const handleMessage = createMessageHandler({ memory, llm, config, personality });
 
   // ── Boot enabled adapters ──────────────────────────────────────────────────
   const adapters = [];
@@ -131,8 +136,10 @@ async function main() {
   });
 }
 
-main().catch((err) => {
-  console.error(chalk.red('\nFatal error:'), err.message);
-  console.error(chalk.dim(err.stack));
-  process.exit(1);
-});
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+  main().catch((err) => {
+    console.error(chalk.red('\nFatal error:'), err.message);
+    console.error(chalk.dim(err.stack));
+    process.exit(1);
+  });
+}
