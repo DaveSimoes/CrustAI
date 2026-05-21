@@ -33,7 +33,7 @@ cd CrustAI && npm install && npm start
 ```
 <div align="center">
   
-Your AI assistant running 100% locally — chat on Telegram, fully offline. 
+**AI assistant running 100% locally — chat on Telegram, fully offline.** 
 ![CrustAI Live Demo](demo/chat.gif)
 
 <img width="600" height="307" alt="new_video_real_chatonline-video-cutter com-ezgif com-optimize" src="https://github.com/user-attachments/assets/699988d8-187a-4b91-82d8-70b73bef9085" />
