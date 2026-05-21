@@ -1,97 +1,87 @@
 <div align="center">
 
-<!-- HERO BANNER -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=200&section=header&text=🦀%20CrustAI&fontSize=80&fontColor=fff&animation=fadeIn&fontAlignY=35&desc=Private%20%7C%20Local-First%20%7C%20Multi-Platform%20AI%20Assistant&descAlignY=60&descSize=18" width="100%" />
+# 🦀 CrustAI
 
-<!-- BADGES ROW 1 — Social proof (STAR CTA primeiro!) -->
-[![GitHub stars](https://img.shields.io/github/stars/DaveSimoes/CrustAI?style=social)](https://github.com/DaveSimoes/CrustAI/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/DaveSimoes/CrustAI?style=social)](https://github.com/DaveSimoes/CrustAI/network/members)
-[![GitHub watchers](https://img.shields.io/github/watchers/DaveSimoes/CrustAI?style=social)](https://github.com/DaveSimoes/CrustAI/watchers)
+### Your AI Assistant. Your Machine. Your Rules.
 
-<!-- BADGES ROW 2 — Tech -->
-[![Node.js](https://img.shields.io/badge/Node.js-≥20.0-brightgreen?style=for-the-badge&logo=node.js)](https://nodejs.org)
-[![Ollama](https://img.shields.io/badge/Ollama-Local%20LLM-blue?style=for-the-badge)](https://ollama.ai)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](https://github.com/DaveSimoes/CrustAI/blob/main/LICENSE)
-[![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-ff69b4?style=for-the-badge)](#-contributing)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=for-the-badge)](https://github.com/DaveSimoes/CrustAI/pulls)
+**100% Private · Runs Locally · Multi-Platform · Zero Cloud**
 
-<!-- TAGLINE -->
-<h3>Run a multi-platform AI assistant on your own machine — with full privacy.</h3>
-<p><b>Telegram · Discord · WhatsApp · Slack</b> — powered by open-source LLMs, 100% offline.</p>
+[![npm version](https://img.shields.io/npm/v/crustai.svg)](https://www.npmjs.com/package/crustai)
+[![Node.js](https://img.shields.io/badge/Node.js-20%2B-brightgreen?logo=node.js)](https://nodejs.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-ff69b4)](https://github.com/DaveSimoes/CrustAI/blob/main/CONTRIBUTING.md)
+[![Self-Hosted](https://img.shields.io/badge/Self--Hosted-100%25-blue)](https://github.com/DaveSimoes/CrustAI)
+[![Ollama](https://img.shields.io/badge/Ollama-Local%20LLM-orange)](https://ollama.ai)
+
+[![Windows](https://img.shields.io/badge/Windows-supported-blue)](#)
+[![macOS](https://img.shields.io/badge/macOS-supported-blue)](#)
+[![Linux](https://img.shields.io/badge/Linux-supported-blue)](#)
+
+---
+
+> **Chat with your own AI on Telegram, Discord, WhatsApp, and Slack — no data ever leaves your machine.**
 
 </div>
 
 ---
 
-## ⭐ Por que dar uma estrela? / Why star this project?
+## Get Started
 
-> **Se você acha privacidade importante, este projeto é para você.**
-> **If you care about privacy, this project is for you.**
+```bash
+git clone https://github.com/DaveSimoes/CrustAI.git
+cd CrustAI && npm install && npm start
+```
 
-- 🔒 **Zero cloud dependency** — your conversations never leave your machine
-- 🧠 **Real local AI** — not a wrapper, a full local LLM runtime via Ollama
-- 📱 **Works where you already are** — Telegram, WhatsApp, Discord, Slack
-- 🌐 **Multilingual** — English, Portuguese & Spanish (more languages welcome)
-- 🛠️ **Open & extensible** — MIT license, clean architecture, easy to hack
-- 🚀 **Active roadmap** — Web UI, Docker one-click, Plugin system coming
+Your AI assistant running 100% locally — chat on Telegram, fully offline.
 
-**⭐ Star the repo to support open-source, private AI — it takes 2 seconds and means the world to the maintainer.**
+![CrustAI Live Demo](demo/chat.gif)
 
----
+<img width="600" height="307" alt="new_video_real_chatonline-video-cutter com-ezgif com-optimize" src="https://github.com/user-attachments/assets/699988d8-187a-4b91-82d8-70b73bef9085" />
 
-## 🌍 Language / Idioma / Idioma
-
-- 🇺🇸 [English](#-what-is-crustai)
-- 🇧🇷 [Português](#-o-que-é-o-crustai)
-- 🇪🇸 [Español](#-qué-es-crustai)
 
 ---
 
-## ⚡ Live Preview
+## Why CrustAI?
 
-<div align="center">
+Every AI assistant you use today sends your conversations to a cloud server. Your questions, your context, your data — all stored externally.
 
-| Boot | Telegram | AI Chat |
-|:---:|:---:|:---:|
-| ![Terminal Demo](https://github.com/DaveSimoes/CrustAI/raw/main/demo/terminal.gif) | ![Ping Demo](https://github.com/DaveSimoes/CrustAI/raw/main/demo/ping.gif) | ![Chat Demo](https://github.com/DaveSimoes/CrustAI/raw/main/demo/chat.gif) |
-| *CrustAI booting up* | *Bot live on Telegram* | *AI responding locally* |
+**CrustAI is different.** It runs entirely on your own machine using [Ollama](https://ollama.ai), meaning:
 
-</div>
-
----
-
-## 🇺🇸 What is CrustAI?
-
-CrustAI is a **self-hosted AI assistant** that runs 100% locally using Ollama. It integrates with **Telegram, Discord, WhatsApp and Slack** so you can chat with your AI in tools you already use — without sending your data to any cloud LLM provider.
-
-Built with **Node.js** and powered by **Ollama** (local LLM runtime), CrustAI is designed for developers, privacy enthusiasts, and anyone who wants an AI assistant that truly belongs to them.
-
----
-
-## ✨ Key Features
-
-| Feature | Description |
+| Without CrustAI | With CrustAI |
 |---|---|
-| 🔒 **100% Local & Private** | Conversations stay on your machine — always |
-| 🧠 **LLM via Ollama** | Use tinyllama, llama3.2, phi3, mistral and more |
-| 📱 **Multi-platform Adapters** | Telegram, WhatsApp, Discord, Slack |
-| 🧬 **Long-term Memory** | Store and retrieve user facts across sessions |
-| ⚡ **REST API** | Integrate CrustAI into external workflows |
-| 🎭 **Personality Config** | Customize tone, style and identity |
-| 🌐 **Multilingual UX** | English, Portuguese & Spanish support |
-| 🗣️ **Voice Offline** | Speak and listen without internet (pt-BR) |
+| Conversations logged on cloud servers | Conversations stay on **your machine** |
+| Data used to train external models | Zero data collection, ever |
+| Requires paid API keys | 100% free, uses local models |
+| One platform (e.g., only ChatGPT web) | Works on Telegram, Discord, WhatsApp, Slack |
+| Internet required | Works fully **offline** |
 
 ---
 
-## 🚀 Quick Start
+## Key Features
+
+|  |  |
+|---|---|
+| 🔒 **100% Private** | Every message stays on your device. No telemetry, no external APIs, no logs |
+| 🧠 **Powered by Ollama** | Use llama3.2, mistral, phi3, tinyllama and any model you choose |
+| 📱 **4 Platforms, 1 Bot** | Connect to Telegram, Discord, WhatsApp, and Slack simultaneously |
+| 🧬 **Long-Term Memory** | Your assistant remembers facts about you across sessions |
+| 🗣️ **Voice Support** | Speak and listen — fully offline voice mode (pt-BR) |
+| ⚡ **REST API** | Integrate CrustAI into your own tools and workflows |
+| 🎭 **Personality Config** | Give your assistant a custom name, tone, and identity |
+| 🐳 **Docker Ready** | One-command deployment for servers and home labs |
+| 🌐 **Bilingual** | Full English + Portuguese support out of the box |
+
+---
+
+## Quick Start
 
 ### Prerequisites
 
 - [Node.js](https://nodejs.org) ≥ 20.0
 - [Ollama](https://ollama.ai) installed and running
-- A Telegram Bot Token from [@BotFather](https://t.me/botfather)
+- A platform token (e.g., Telegram Bot Token from [@BotFather](https://t.me/botfather))
 
-### Installation
+### Install & Run
 
 ```bash
 # 1. Clone the repository
@@ -103,39 +93,42 @@ npm install
 
 # 3. Start Ollama and pull a model
 ollama serve
-ollama pull tinyllama   # lightweight (600MB)
+ollama pull tinyllama     # lightweight — 600MB, works on any machine
 # or
-ollama pull llama3.2    # more powerful (2GB, needs 8GB RAM)
+ollama pull llama3.2      # more powerful — 2GB, recommended 8GB RAM
 
-# 4. Configure the project
+# 4. Configure
 cp config/config.example.yml config/config.yml
-# Edit config/config.yml with your Telegram token and model
+# Edit config/config.yml with your platform tokens
 
-# 5. Run CrustAI
+# 5. Launch CrustAI
 npm start
 ```
 
 ---
 
-## ⚙️ Configuration
+## Configuration
 
 Edit `config/config.yml`:
 
 ```yaml
-model: tinyllama          # or llama3.2, phi3, mistral...
+model: tinyllama           # or llama3.2, phi3, mistral...
 ollama_url: http://localhost:11434
-language: pt-BR   # options: en-US | pt-BR | es-ES
+language: en               # or pt-BR
 
 telegram:
   enabled: true
   token: YOUR_BOT_TOKEN_HERE
-  allowed_user_ids: []    # leave empty to allow all users
+  allowed_user_ids: []     # leave empty to allow all users
 
 discord:
   enabled: false
   token: ""
 
 whatsapp:
+  enabled: false
+
+slack:
   enabled: false
 
 voice:
@@ -145,40 +138,59 @@ voice:
 
 ---
 
-## 💬 Available Commands
+## Available Commands
 
-```
-/ping      → Check if the bot is alive
-/help      → Show all commands
-/model     → Show which AI model is running
-/remember  → Store a fact in long-term memory
-/forget    → Erase all stored facts
-/clear     → Clear conversation history
-```
-
----
-
-## 🏗️ Architecture
-
-```
-Adapters (Telegram / Discord / WhatsApp / Slack)
-                │
-                ▼
-         Message Orchestrator
-        ┌────────┴────────┐
-        ▼                 ▼
-   Ollama Client      Memory Store
-        │                 │
-        └────────┬────────┘
-                 ▼
-             REST API
-```
-
-> **Design note:** adapter boundaries make it easy to add new channels without changing core conversation logic.
+| Command | Description |
+|---|---|
+| `/ping` | Check if the bot is alive |
+| `/help` | Show all available commands |
+| `/model` | Display which AI model is currently running |
+| `/remember <fact>` | Store a fact in long-term memory |
+| `/forget` | Erase all stored facts |
+| `/clear` | Clear conversation history |
 
 ---
 
-## 🛠️ Tech Stack
+## Architecture
+
+```
+Messaging Platforms (Telegram / Discord / WhatsApp / Slack)
+                        │
+                        ▼
+             ┌─────────────────────┐
+             │  Message Orchestrator│
+             └────────┬────────────┘
+                      │
+           ┌──────────┴──────────┐
+           ▼                     ▼
+    ┌─────────────┐      ┌──────────────┐
+    │ Ollama LLM  │      │ Memory Store │
+    │  (local)    │      │  (sql.js)    │
+    └─────────────┘      └──────────────┘
+           │                     │
+           └──────────┬──────────┘
+                      ▼
+               ┌─────────────┐
+               │  REST API   │
+               │  (Fastify)  │
+               └─────────────┘
+```
+
+**Design principle:** Adapter boundaries make it trivial to add new messaging platforms without touching the core conversation logic.
+
+---
+
+## How It Works
+
+1. **Adapters** — Each platform (Telegram, Discord, WhatsApp, Slack) has its own isolated adapter. Messages are normalized into a unified format before reaching the orchestrator.
+2. **Orchestrator** — Receives messages, applies personality config, queries the LLM, and manages conversation context.
+3. **Ollama LLM** — Runs any compatible model locally. No network calls. No rate limits. No billing.
+4. **Memory Store** — Persists user-defined facts in a local SQLite database, available across sessions.
+5. **REST API** — Exposes endpoints for integrating CrustAI into custom tools, automations, and dashboards.
+
+---
+
+## Tech Stack
 
 | Technology | Purpose |
 |---|---|
@@ -194,177 +206,135 @@ Adapters (Telegram / Discord / WhatsApp / Slack)
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 crustai/
 ├── src/
 │   ├── core/
-│   │   ├── index.js        # Main orchestrator
-│   │   ├── llm.js          # Ollama LLM client
-│   │   └── commands.js     # Command handler
+│   │   ├── index.js          # Main orchestrator
+│   │   ├── llm.js            # Ollama LLM client
+│   │   └── commands.js       # Command handler
 │   ├── adapters/
-│   │   ├── telegram/       # Telegram bot
-│   │   ├── discord/        # Discord bot
-│   │   ├── whatsapp/       # WhatsApp bot
-│   │   └── slack/          # Slack bot
+│   │   ├── telegram/         # Telegram bot
+│   │   ├── discord/          # Discord bot
+│   │   ├── whatsapp/         # WhatsApp bot
+│   │   └── slack/            # Slack bot
 │   ├── memory/
-│   │   └── store.js        # Long-term memory
+│   │   └── store.js          # Long-term memory (SQLite)
 │   ├── personality/
-│   │   └── prompt.js       # System prompt builder
+│   │   └── prompt.js         # System prompt builder
 │   ├── voice/
-│   │   └── server.js       # Voice WebSocket server
+│   │   └── server.js         # Offline voice WebSocket server
 │   └── api/
-│       └── server.js       # REST API
+│       └── server.js         # REST API
 ├── config/
-│   ├── config.yml          # Your configuration (git-ignored)
-│   ├── config.example.yml  # Template
-│   └── personality.yml     # Assistant personality
+│   ├── config.yml            # Your config (git-ignored)
+│   ├── config.example.yml    # Template
+│   └── personality.yml       # Assistant personality
 ├── demo/
-│   ├── terminal.gif        # Boot demo
-│   ├── ping.gif            # Telegram connection demo
-│   └── chat.gif            # AI conversation demo
-└── data/                   # Local database (git-ignored)
+│   ├── terminal.gif
+│   ├── ping.gif
+│   └── chat.gif
+└── data/                     # Local database (git-ignored)
 ```
 
 ---
 
-## 🔐 Privacy First
+## Privacy First
 
-CrustAI was built with privacy as its core principle:
+CrustAI was built with privacy as its core principle — not as a feature, but as a hard technical constraint:
 
 - ✅ All conversations stay on **your machine**
-- ✅ No API keys sent to external AI services
-- ✅ No telemetry or usage tracking
-- ✅ Open source — inspect every line of code
-- ✅ Your data, your rules
+- ✅ No API keys sent to external AI providers
+- ✅ No telemetry, usage tracking, or analytics
+- ✅ No accounts, no sign-up, no terms-of-service surprise
+- ✅ Fully open source — inspect every single line
+- ✅ Your data. Your models. Your rules.
 
 ---
 
-## 🗺️ Roadmap
+## Supported Models (via Ollama)
 
-- [ ] 🖥️ Web UI dashboard
-- [ ] 🖼️ Image understanding (multimodal LLMs)
-- [ ] 🧩 Plugin system for custom tools
-- [ ] 🐳 Docker one-click deployment
-- [ ] 📱 Mobile app companion
+| Model | Size | Best For |
+|---|---|---|
+| `tinyllama` | ~600MB | Low-end machines, quick replies |
+| `phi3` | ~2GB | Balanced performance |
+| `llama3.2` | ~2GB | General purpose, highly capable |
+| `mistral` | ~4GB | Strong reasoning and coding |
+| `llama3` | ~4GB | High quality conversations |
 
-> 💡 Want to help build any of these? Check the [open issues](https://github.com/DaveSimoes/CrustAI/issues) — contributions are very welcome!
-
----
-
-## 🤝 Contributing
-
-Contributions, issues and feature requests are welcome!
-
-1. Fork the project
-2. Create your feature branch: `git checkout -b feat/my-feature`
-3. Commit your changes: `git commit -m 'feat: add my feature'`
-4. Push to the branch: `git push origin feat/my-feature`
-5. Open a Pull Request
-
-See [`CONTRIBUTING.md`](./CONTRIBUTING.md) for detailed guidelines.
+Any model available on [ollama.ai](https://ollama.ai/library) can be used.
 
 ---
 
-## 👨‍💻 Author
+## Roadmap
 
-**Dave Simoes** — Developer passionate about AI, privacy and open source.
-
-- 🐙 GitHub: [@DaveSimoes](https://github.com/DaveSimoes)
-- 💼 LinkedIn: [Dave Simoes](https://linkedin.com/in/davesimoes)
-
----
-
-<div align="center">
-
-## ⭐ Support the Project
-
-**If CrustAI helped you, please give it a star — it helps a lot!**
-**Se o CrustAI te ajudou, deixe uma estrela — faz toda a diferença!**
-
-[![GitHub stars](https://img.shields.io/github/stars/DaveSimoes/CrustAI?style=for-the-badge&logo=github&color=yellow)](https://github.com/DaveSimoes/CrustAI/stargazers)
-
-*Made with 🦀 and ❤️ by Dave Simoes*
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=100&section=footer" width="100%" />
-
-</div>
+- [x] Telegram integration
+- [x] Discord integration
+- [x] WhatsApp integration
+- [x] Slack integration
+- [x] Long-term memory
+- [x] REST API
+- [x] Bilingual support (EN / PT-BR)
+- [ ] Web UI dashboard
+- [ ] Docker one-click deployment
+- [ ] Image understanding (multimodal LLMs)
+- [ ] Plugin system for custom tools
+- [ ] Mobile app companion
 
 ---
 
----
+## Contributing
 
-## 🇪🇸 ¿Qué es CrustAI?
-
-**CrustAI** es un asistente de IA completamente privado y auto-hospedado que funciona 100% en tu propia máquina — ningún dato sale de tu computadora. Se conecta con plataformas de mensajería populares como **Telegram, WhatsApp, Discord y Slack**, ofreciendo el poder de una IA conversacional sin comprometer tu privacidad.
-
-Construido con **Node.js** e impulsado por **Ollama** (motor de LLM local), CrustAI está diseñado para desarrolladores, entusiastas de la privacidad y cualquier persona que quiera un asistente de IA que verdaderamente les pertenezca.
-
----
-
-## ✨ Funcionalidades Principales
-
-| Funcionalidad | Descripción |
-|---|---|
-| 🔒 **100% Privado** | Todos los datos permanecen en tu máquina. Sin nube |
-| 🧠 **LLM Local** | Powered by Ollama — soporta llama3.2, tinyllama y más |
-| 📱 **Multi-Plataforma** | Telegram, WhatsApp, Discord, Slack — un solo bot |
-| 🧬 **Memoria Larga** | Recuerda datos sobre ti entre conversaciones |
-| 🗣️ **Voz Sin Internet** | Habla y escucha sin conexión (es-ES) |
-| ⚡ **REST API** | API integrada para integraciones personalizadas |
-| 🎭 **Personalidad** | Configura el nombre, tono y comportamiento del asistente |
-
----
-
-## 🚀 Inicio Rápido
+Contributions are very welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) before opening a PR.
 
 ```bash
-# 1. Clona el repositorio
-git clone https://github.com/DaveSimoes/CrustAI.git
-cd CrustAI
-
-# 2. Instala las dependencias
-npm install
-
-# 3. Inicia Ollama y descarga un modelo
-ollama serve
-ollama pull tinyllama
-
-# 4. Configura el proyecto
-cp config/config.example.yml config/config.yml
-# Edita config/config.yml con tu token de Telegram
-# Cambia language: es-ES en config/personality.yml
-
-# 5. Inicia CrustAI
-npm start
+# Fork the repository, then:
+git checkout -b feature/your-feature
+git commit -m "feat: add your feature"
+git push origin feature/your-feature
+# Open a Pull Request
 ```
+
+---
+
+## Troubleshooting
+
+**"Connection refused" on Ollama** — Make sure Ollama is running: `ollama serve`
+
+**Bot not responding on Telegram** — Double-check your token in `config/config.yml` and that the bot was started with `/start`.
+
+**High memory usage** — Switch to a lighter model like `tinyllama`. Edit `model:` in `config/config.yml`.
+
+**WhatsApp keeps disconnecting** — WhatsApp Web sessions expire. Restart CrustAI to regenerate the QR code.
+
+---
+
+## Language / Idioma
+
+- 🇺🇸 [English](#-crustai) — you're reading it
+- 🇧🇷 [Português](#-o-que-é-o-crustai) — role para baixo
 
 ---
 
 ## 🇧🇷 O que é o CrustAI?
 
-**CrustAI** é um assistente de IA totalmente privado e auto-hospedado que roda inteiramente na sua própria máquina — nenhum dado sai do seu computador. Ele se conecta a plataformas de mensagens populares como **Telegram, WhatsApp, Discord e Slack**, oferecendo o poder de uma IA conversacional sem abrir mão da sua privacidade.
+**CrustAI** é um assistente de IA totalmente privado e auto-hospedado que roda inteiramente na sua própria máquina — nenhum dado sai do seu computador. Conecta-se ao **Telegram, WhatsApp, Discord e Slack** com o poder de modelos de linguagem locais, sem depender de nenhum provedor externo.
 
-Construído com **Node.js** e alimentado pelo **Ollama** (motor de LLM local), o CrustAI foi projetado para desenvolvedores, entusiastas de privacidade e qualquer pessoa que queira um assistente de IA que realmente lhe pertença.
-
----
-
-## ✨ Funcionalidades Principais
+### ✨ Funcionalidades Principais
 
 | Funcionalidade | Descrição |
 |---|---|
-| 🔒 **100% Privado** | Todos os dados ficam na sua máquina. Sem nuvem |
-| 🧠 **LLM Local** | Powered by Ollama — suporta llama3.2, tinyllama e mais |
-| 📱 **Multi-Plataforma** | Telegram, WhatsApp, Discord, Slack — um só bot |
+| 🔒 **100% Privado** | Todos os dados ficam na sua máquina. Sem nuvem, jamais |
+| 🧠 **LLM Local** | Powered by Ollama — llama3.2, tinyllama, mistral e muito mais |
+| 📱 **Multi-Plataforma** | Telegram, WhatsApp, Discord, Slack — um só assistente |
 | 🧬 **Memória Longa** | Lembra fatos sobre você entre conversas |
 | 🗣️ **Voz Offline** | Fala e escuta sem internet (pt-BR) |
-| ⚡ **REST API** | API integrada para integrações customizadas |
-| 🎭 **Personalidade** | Configure o nome, tom e comportamento do assistente |
+| ⚡ **REST API** | Integre o CrustAI em qualquer fluxo de trabalho |
+| 🎭 **Personalidade** | Configure nome, tom e comportamento do assistente |
 
----
-
-## 🚀 Início Rápido
+### 🚀 Início Rápido
 
 ```bash
 # 1. Clone o repositório
@@ -388,8 +358,27 @@ npm start
 
 ---
 
-## 📄 License / Licença
+## Author
 
-This project is licensed under the **MIT License** — see the [LICENSE](./LICENSE) file for details.
+**Dave Simoes** — Developer passionate about AI, privacy, and open source.
 
-Este projeto está licenciado sob a **Licença MIT** — veja o arquivo [LICENSE](./LICENSE) para detalhes.
+- 🐙 GitHub: [@DaveSimoes](https://github.com/DaveSimoes)
+- 💼 LinkedIn: [Dave Simoes](https://linkedin.com/in/davesimoes)
+
+---
+
+## License
+
+MIT — see [LICENSE](LICENSE) for details.
+
+---
+
+<div align="center">
+
+**Made with 🦀 and ❤️ by Dave Simoes**
+
+[⭐ Star this repo if CrustAI helped you!](https://github.com/DaveSimoes/CrustAI)
+
+[Report Bug](https://github.com/DaveSimoes/CrustAI/issues) · [Request Feature](https://github.com/DaveSimoes/CrustAI/issues) · [Read the Docs](https://documentcrustai.netlify.app/)
+
+</div>
