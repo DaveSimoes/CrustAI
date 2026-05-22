@@ -9,7 +9,8 @@
     "dev": "node --watch src/core/index.js",
     "setup": "node scripts/setup.js",
     "connect": "node scripts/connect.js",
-    "test": "node scripts/test.js && vitest run"
+    "test": "node scripts/test.js && vitest run",
+    "benchmark": "node scripts/benchmark.js"
   },
   "keywords": [
     "ai",
