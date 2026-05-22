@@ -105,7 +105,15 @@ cp config/config.example.yml config/config.yml
 # 5. Launch CrustAI
 npm start
 ```
+## 📊 Model Benchmark
 
+Run a full performance comparison across all supported Ollama models — no cloud, no setup, just results.
+
+```bash
+node scripts/benchmark.js
+```
+
+➡️ [Full benchmark documentation](docs/BENCHMARK.md)
 ---
 
 ## Configuration
