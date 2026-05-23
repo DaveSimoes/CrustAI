@@ -1,0 +1,83 @@
+version: "3.9"
+
+# ─── CrustAI — One-click local AI stack ───────────────────────────────────────
+#
+# Usage:
+#   1. cp config/config.example.yml config/config.yml
+#   2. Edit config/config.yml with your bot tokens
+#   3. docker compose up -d
+#
+# The stack starts:
+#   • ollama   — local LLM engine  (port 11434)
+#   • crustai  — AI assistant bot  (port 3000)
+# ──────────────────────────────────────────────────────────────────────────────
+
+services:
+
+  # ── Ollama ──────────────────────────────────────────────────────────────────
+  ollama:
+    image: ollama/ollama:latest
+    container_name: crustai-ollama
+    restart: unless-stopped
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:11434/api/tags"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 20s
+
+  # ── Model puller (runs once, then exits) ────────────────────────────────────
+  ollama-pull:
+    image: ollama/ollama:latest
+    container_name: crustai-ollama-pull
+    depends_on:
+      ollama:
+        condition: service_healthy
+    environment:
+      - OLLAMA_HOST=http://ollama:11434
+    entrypoint: >
+      sh -c "
+        ollama pull ${OLLAMA_MODEL:-tinyllama} &&
+        echo '✅ Model ${OLLAMA_MODEL:-tinyllama} ready'
+      "
+    restart: "no"
+
+  # ── CrustAI ─────────────────────────────────────────────────────────────────
+  crustai:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: crustai-app
+    restart: unless-stopped
+    depends_on:
+      ollama:
+        condition: service_healthy
+    ports:
+      - "3000:3000"
+    volumes:
+      # Config (required — must exist before running)
+      - ./config/config.yml:/app/config/config.yml:ro
+      - ./config/personality.yml:/app/config/personality.yml:ro
+      # Persistent local database
+      - crustai_data:/app/data
+    environment:
+      - NODE_ENV=production
+      - OLLAMA_URL=http://ollama:11434
+      - OLLAMA_MODEL=${OLLAMA_MODEL:-tinyllama}
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 15s
+
+# ─── Volumes ──────────────────────────────────────────────────────────────────
+volumes:
+  ollama_data:
+    driver: local
+  crustai_data:
+    driver: local
